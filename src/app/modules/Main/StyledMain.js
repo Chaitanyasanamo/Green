@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 import Main from '../../images/main.jpg';
+import MainMobile from '../../images/main_mobile.jpg';
 import landscape from '../../images/landscape.jpg';
 import gifting from '../../images/gifting.jpg';
 import aquaponics from '../../images/aquaponics.jpg';
+import cross from '../../images/cross.png';
+import logo from '../../images/Logo_Medium.png';
 
 export const MainBg = styled.div`
     width: 100%;
@@ -15,12 +18,18 @@ export const MainBg = styled.div`
     -webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.9);
     -moz-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.9);
     box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.9);
+    @media (max-width: 600px) {
+        background-image: url(${MainMobile});
+      }
 `;
 
 export const MainBgLeft = styled.div`
     display: flex;
     flex: 1;
     width: 50%;
+    @media (max-width: 600px) {
+        display: none;
+    }
 `;
 
 export const MainBgRight = styled.div`
@@ -43,6 +52,18 @@ export const MainHeading = styled.div`
     text-shadow: 1px 1px #a5a5a5;
 `;
 
+export const MainLogo = styled.div`
+    background-image: url(${logo});
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media (max-width: 600px) {
+        width: 340px;
+        margin-top: 260px;
+    }
+`;
+
 export const MainSubHeading = styled.div`
     text-align: center;
     font-weight: 500;
@@ -56,6 +77,10 @@ export const MainSubHeading = styled.div`
         padding-right: 0px;
         padding-left: 0px;
         text-align: left;
+        margin-top: -143px;
+        text-align: center;
+        font-size: 12px;
+        text-shadow: none;
       }
 `;
 
@@ -66,9 +91,26 @@ export const SecondSection = styled.div`
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    background-image: url(${cross});
 `;
 
+export const SecondSectionCover = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00000000',GradientType=0 );
+`;
+
+
 export const SectionHeading = styled.div`
+    position: relative;
+    z-index: 99;
     color: #17350d;
     font-size: 50px;
     font-weight: 600;
@@ -86,6 +128,8 @@ export const SectionHeading = styled.div`
 `;
 
 export const ServiceWrapper = styled.div`
+    position: relative;
+    z-index: 99;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -112,10 +156,9 @@ export const ServiceName = styled.div`
     font-size: 30px;
     text-align: left;
     padding-top: 20px;
-    margin-left: 25px;
-    text-shadow: 1px 1px #17350d;
+    margin-left: 20px;
     @media (max-width: 600px) {
-        margin-left: 25px;
+        margin-left: 20px;
     }
 `;
 
@@ -139,7 +182,7 @@ export const ServiceDesc = styled.div`
     line-height: 24px;
     box-sizing: border-box;
     @media (max-width: 600px) {
-        padding-left: 25px;
+        padding-left: 20px;
     }
 `;
 
@@ -150,9 +193,7 @@ export const ThirdSection = styled.div`
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.9);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.9);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.9);
+    border-top: 2px solid #eaeaea;
 `;
 
 export const SectionHeadingThird = styled.div`

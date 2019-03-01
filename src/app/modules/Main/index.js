@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   MainBg,
-  MainHeading,
+  MainLogo,
   MainSubHeading,
   MainBgLeft,
   MainBgRight,
@@ -27,6 +27,7 @@ import {
   Instagram,
   Whatsapp,
   ExternalLink,
+  SecondSectionCover,
 } from './StyledMain';
 
 const Main = () => (
@@ -34,13 +35,14 @@ const Main = () => (
     <MainBg>
       <MainBgLeft />
       <MainBgRight>
-        <MainHeading>Crafting in Green</MainHeading>
+        <MainLogo />
         <MainSubHeading>
-          Customized gardens and green setups since 2016
+          Handcrafted Green Setups since 2016
         </MainSubHeading>
       </MainBgRight>
     </MainBg>
     <SecondSection>
+      <SecondSectionCover />
       <SectionHeading>Services Offered</SectionHeading>
       <ServiceWrapper>
         <Service>
