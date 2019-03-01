@@ -60,7 +60,7 @@ export const MainSubHeading = styled.div`
 `;
 
 export const SecondSection = styled.div`
-    background-color: #17350d;
+    background-color: #f7f7f7;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -69,17 +69,17 @@ export const SecondSection = styled.div`
 `;
 
 export const SectionHeading = styled.div`
-    color: #f7f7f7;
+    color: #17350d;
     font-size: 50px;
     font-weight: 600;
     letter-spacing: 1.5px;
     margin-top: 75px;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
     text-align: center;
     width: 100%;
     @media (max-width: 600px) {
         margin-top: 25px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         font-size: 50px;
         line-height: 60px;
     }
@@ -87,10 +87,10 @@ export const SectionHeading = styled.div`
 
 export const ServiceWrapper = styled.div`
     width: 100%;
-    overflow-x: auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding-top: 10px;
 `;
 
 export const Service = styled.div`
@@ -98,9 +98,9 @@ export const Service = styled.div`
     width: 400px;
     margin-bottom: 100px;
     background-color: #f7f7f7;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     @media (max-width: 600px) {
         height: auto;
     }
@@ -108,11 +108,11 @@ export const Service = styled.div`
 
 export const ServiceName = styled.div`
     font-weight: 500;
-    color: #a5a5a5;
+    color: #17350d;
     font-size: 30px;
     text-align: left;
     padding-top: 20px;
-    margin-left: -30px;
+    margin-left: 25px;
     text-shadow: 1px 1px #17350d;
     @media (max-width: 600px) {
         margin-left: 25px;
@@ -150,9 +150,9 @@ export const ThirdSection = styled.div`
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    -webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.9);
-    -moz-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.9);
-    box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.9);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.9);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.9);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.9);
 `;
 
 export const SectionHeadingThird = styled.div`
@@ -264,4 +264,8 @@ export const Instagram = styled.div`
 
 export const Whatsapp = styled.div`
     cursor: pointer;
+`;
+
+export const ExternalLink = styled.a`
+    color: #ffffff;
 `;

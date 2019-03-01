@@ -26,6 +26,7 @@ import {
   Facebook,
   Instagram,
   Whatsapp,
+  ExternalLink,
 } from './StyledMain';
 
 const Main = () => (
@@ -87,9 +88,9 @@ const Main = () => (
     <FourthSection>
       <Copyright>© Plantorium 2019</Copyright>
       <Connect>
-        <Facebook>facebook</Facebook>
-        <Instagram>instagram</Instagram>
-        <Whatsapp>whatsapp</Whatsapp>
+        <Facebook><ExternalLink href="https://www.facebook.com/greencraftersofficial">facebook</ExternalLink></Facebook>
+        <Instagram><ExternalLink href="https://www.instagram.com/green_crafters/">instagram</ExternalLink></Instagram>
+        <Whatsapp><ExternalLink href="tel: 9620508938">whatsapp</ExternalLink></Whatsapp>
       </Connect>
     </FourthSection>
   </React.Fragment>
