@@ -1,11 +1,11 @@
 import React from 'react';
-import Button from './app/components/Buttons/Button';
-import NewsList from './app/components/NewsList/NewsList';
+import Main from './app/modules/Main';
+import './App.css';
+
 
 const App = () => (
   <React.Fragment>
-    <Button>Click</Button>
-    <NewsList />
+    <Main />
   </React.Fragment>
 );
 export default App;
