@@ -8,4 +8,4 @@ import configureStore from './configureStore';
 const store = configureStore();
 
 render(<Root store={store} />, document.getElementById('root'));
-serviceWorker.unregister();
+serviceWorker.register();

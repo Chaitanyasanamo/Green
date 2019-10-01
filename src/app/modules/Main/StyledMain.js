@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import Main from '../../images/main.jpg';
-import MainMobile from '../../images/main_mobile.jpg';
-import landscape from '../../images/landscape.jpg';
-import gifting from '../../images/gifting.jpg';
-import aquaponics from '../../images/aquaponics.jpg';
-import cross from '../../images/cross.png';
-import logo from '../../images/Logo_Medium.png';
+import Main from '../../images/main.webp';
+import MainMobile from '../../images/main_mobile.webp';
+import landscape from '../../images/landscape.webp';
+import gifting from '../../images/gifting.webp';
+import aquaponics from '../../images/aquaponics.webp';
+import cross from '../../images/cross.webp';
+import logo from '../../images/Logo_Medium.webp';
+import hand from '../../images/hand.webp';
 
 export const MainBg = styled.div`
     width: 100%;
@@ -166,7 +167,8 @@ export const ServiceImage = styled.div`
     background-image: ${props => (props.Image === 'firstService' ? `url(${landscape})` : null)};
     background-image: ${props => (props.Image === 'secondService' ? `url(${aquaponics})` : null)};
     background-image: ${props => (props.Image === 'thirdService' ? `url(${gifting})` : null)};
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 400px;
     height: 280px;
     margin-top: 25px;
@@ -187,13 +189,14 @@ export const ServiceDesc = styled.div`
 `;
 
 export const ThirdSection = styled.div`
-    background-color: #ffffff;
+    background-color: #e3d9d7;
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    border-top: 2px solid #eaeaea;
+    border-top: 2px solid #e3d9d7;
+    padding-bottom: 50px;
 `;
 
 export const SectionHeadingThird = styled.div`
@@ -227,31 +230,47 @@ export const FormSubText = styled.div`
     color: #17350d;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 30px;
+`;
+
+export const FormLabel = styled.div`
+    margin-top: 20px;
 `;
 
 export const FormInput = styled.input`
-    width: 50%;
+    width: calc(100% - 40px);
     border: none;
-    border-bottom: 1px solid #666666;
+    border-bottom: ${props => (props.value === '' && props.hasError ? '1px solid red' : '1px solid #666666')};
     padding: 10px;
     font-size: 18px;
+    padding-left: 0;
+    margin-bottom: 10px;
+    background-color: transparent;
 `;
 
 export const FormWrapper = styled.div`
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    padding-left: 20px;
+    flex: 2;
+    background-color: #e3d9d7;
+    @media (min-width: 600px) {
+        width: 50%;
+      }
 `;
 
 export const FormButton = styled.div`
     border: 1px solid #17350d;
     height: 40px;
-    margin-left: 20px;
+    margin-left: 0px;
     padding-left: 20px;
+    align-self: flex-end;
+    margin-right: 25px;
     padding-right: 20px;
+    margin-top: 50px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -262,6 +281,16 @@ export const FormButton = styled.div`
         background: #17350d;
         color: #ffffff;
       }
+`;
+
+export const ThankYou = styled.div`
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 36px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 `;
 
 export const FourthSection = styled.div`
@@ -309,4 +338,22 @@ export const Whatsapp = styled.div`
 
 export const ExternalLink = styled.a`
     color: #ffffff;
+`;
+
+export const FormField = styled.div`
+    display: flex;
+`;
+
+export const FormImage = styled.div`
+    display: flex;
+    flex: 1;
+    width: 30%;
+    background-image: url(${hand});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #e3d9d7;
+    min-height: 600px;
+    @media (max-width: 600px) {
+        display: none;
+      }
 `;
